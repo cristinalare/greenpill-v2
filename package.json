@@ -1,0 +1,20 @@
+{
+  "name": "greenpill_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:css": "postcss ./tailwind.css -o ./styles.css --watch", 
+    "dev": "npm run tailwind:css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0"
+  }
+}

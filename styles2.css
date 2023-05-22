@@ -1,0 +1,81 @@
+:root {
+  --green: #C2E812;
+  --yellow: #FFD972;
+  --white: #FFFFFF;
+  --dark-green: #254D32;
+  --mid-green: #4FB477;
+}
+
+p {
+  color: white;
+}
+
+body {
+  background: url('./src/images/greenpill-bg.png') var(--dark-green);
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: contain;
+  /* mix-blend-mode: screen; */
+
+  font-weight: 500;
+}
+
+button {
+  border-radius: 35px;
+  min-width: 160px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+button.primary {
+  color: var(--dark-green);
+  background-color: var(--green);
+}
+button.primary:hover {
+  background-color: var(--mid-green);
+  transform: translate(2px, 2px);
+}
+
+button.secondary {
+  background-color: var(--dark-green);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+button.secondary:hover {
+  color: var(--mid-green);
+  border-color: var(--mid-green);
+}
+
+.link {
+  padding: 0.5rem 1rem;
+  color: var(--green);
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.link:hover {
+  color: var(--mid-green);
+  transform: translate(2px, 2px);
+}
+
+.heart-icon {
+  
+  color: linear-gradient(312.31deg, #08FFB8 30.49%, #5799F7 94.47%);
+}
+
+/* .hero-section {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 55rem);
+  margin: 0 auto;
+  height: 70vh;
+} */
+#resource-img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
