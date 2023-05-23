@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="./styles2.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./custom-styles.css" rel="stylesheet" />
 
   <link rel="preload" as="image" href="./src/images/img-sequence/01.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,46 +16,50 @@
 <body class="relative">
     <!-- parallax bg elements -->
     <!-- left -->
-    <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
+    <!-- <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
       class="absolute z-0 top-[50vh] parallax-bg"/>
     
     <img data-speed="-1.3" data-movex="950" src="./src/images/background/bg-el3.png" width="60" height="120" alt=""
       class="absolute z-0 top-[10vh] left-[15vw] parallax-bg" />
-      <!-- right -->
     <img data-speed="-1.1" data-movex="-300" src="./src/images/background/bg-el2.png" width="100" height="100" alt=""
-      class="absolute z-0 top-[70vh] right-0 parallax-bg" />
+      class="absolute z-0 top-[70vh] right-0 parallax-bg" /> -->
   
   <div class="font-inter">
-    <header class="flex justify-between py-6 px-8 absolute top-0 left-0 right-0 z-10">
-      <div class="flex gap-2 items-center">
-        <img src="./src/images/greenpill-logo.svg" width="40" height="40" class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]"/>
+
+    <div id="logo" class="flex justify-start py-3 px-8 absolute top-0 left-0 right-0 cursor-pointer">
+      <div class="flex gap-2 items-center fixed left-8 z-50">
+        <img src="./src/images/greenpill-logo.svg" width="40" height="40"
+          class="w-[25px] h-[25px] sm:w-[40px] sm:h-[40px]" />
         <h1 class="text-sm sm:text-base text-green font-bold">Green Pill</h1>
       </div>
-      <div class="sm:hidden z-50 text-green hover:text-white" id="mobile-menu-icon">
-        <svg role="img" fill="none" height="24" viewBox="0 0 24 24" width="24"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>menu icon</title>
-          <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-            stroke-width="2" />
-        </svg>
-      </div>
-      <nav class="absolute sm:static sm:block hidden right-0 top-0" id="mobile-menu">
-        <ul class="flex gap-8 sm:flex-row flex-col sm:h-auto h-screen justify-center sm:w-auto w-[50vw] sm:items-start items-end sm:px-0 px-8 sm:bg-transparent bg-black bg-opacity-70">
-          <a href="#book"><li class="sm:text-left text-right link !font-bold">Book</li></a>
-          <a href="#podcast"><li class="sm:text-left text-right link !font-bold">Podcast</li></a>
-          <a href="#multimedia"><li class="sm:text-left text-right link !font-bold">Multimedia</li></a>
-          <a href="#get-involved"><li class="sm:text-left text-right link !font-bold">Get involved</li></a>
-        </ul>
-      </nav>
-    </header>
+    </div>
+    <div class="slides-container">
+    <div class="slides bg-img-x">
+    
+      <div class="slide transition-opacity duration-500 min-h-[100vh] flex items-center justify-center">
+      <header class="flex justify-end py-3 px-8 absolute top-0 left-0 right-0">
+        <div class="sm:hidden z-50 text-green hover:text-white" id="mobile-menu-icon">
+          <svg role="img" fill="none" height="24" viewBox="0 0 24 24" width="24"
+            xmlns="http://www.w3.org/2000/svg">
+            <title>menu icon</title>
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </div>
+        <nav class="absolute sm:static sm:block hidden right-0 top-0" id="mobile-menu">
+          <ul class="flex gap-8 sm:flex-row flex-col sm:h-auto h-screen justify-center sm:w-auto w-[50vw] sm:items-start items-end sm:px-0 px-8 sm:bg-transparent bg-black bg-opacity-70">
+            <a ><li class="sm:text-left text-right link !font-bold">Book</li></a>
+            <a><li class="sm:text-left text-right link !font-bold">Podcast</li></a>
+            <a data-section="multimedia"><li class="sm:text-left text-right link !font-bold">Multimedia</li></a>
+            <a data-section="get-involved"><li class="sm:text-left text-right link !font-bold">Get involved</li></a>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
       <!-- hero -->
-       
       <!-- v1 -->
-      <div class="slides-container">
-      <div class="slides bg-img-x">
-      <section class="slide py-20 flex justify-center items-center min-h-[100vh]">
+      
+      <section class="py-12 flex justify-center items-center h-full min-h-[80vh]">
         <h1 class="font-volkhov text-xl sm:text-4xl lg:text-6xl uppercase text-yellow !leading-relaxed lg:leading-[1.3]">Turning<br />
           Degens<br />
           to Regens
@@ -64,16 +68,17 @@
       </section>
 
        <!-- v2 -->
-      <!-- <section class="slide flex justify-center items-center min-h-[80vh] img-sequence-container hero-section py-20">
+      <!-- <section class="slide transition-opacity duration-500 flex justify-center items-center min-h-[80vh] img-sequence-container hero-section py-20">
         <h1 class="font-volkhov text-6xl uppercase text-yellow leading-[1.3]">Turning<br/>
           Degens<br/>
           to Regens
         </h1>
         <canvas id="hero" class="hero-img" width="329" height="329"></canvas>
       </section> -->
+      </div>
 
       <!-- map -->
-      <section class="slide x-100 min-h-screen sm:h-screen py-12 sm:px-8 flex items-center justify-center">
+      <section class="slide transition-opacity duration-500 x-100 min-h-screen sm:h-screen py-12 sm:px-8 flex items-center justify-center">
         <div>
           <h2 class="font-volkhov text-xl lg:text-3xl text-yellow text-center mb-2 xl:mb-4">We’re building a CoordiNation across Nations & Cultures.</h2>
           <p class="text-center max-w-md m-auto mb-5 xl:mb-12">CoordiNation (noun): a network-state that exports regenerative digital infrastructure to the world.</p>
@@ -95,7 +100,7 @@
 
 
       <!-- books -->
-      <section class="slide x-100 pb-6 min-h-screen sm:h-screen flex items-center justify-center" id="book">
+      <section class="slide transition-opacity duration-500 x-100 pb-6 min-h-screen sm:h-screen flex items-center justify-center" id="book">
         <div class="flex xl:gap-10 gap-4 xl:flex-col items-center sm:flex-row flex-col">
         <div>
           <h2 class="font-volkhov text-xl lg:text-3xl text-yellow text-center mb-4">The Greenpill v0 book (2022)</h2>
@@ -109,12 +114,12 @@
         <div class="flex gap-6 xl:gap-[5%] justify-center relative">
 
           <!-- parallax bg elements -->
-          <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
+          <!-- <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
             class="absolute z-0 top-[50vh] parallax-bg" />
           <img data-speed="-1.3" data-movex="950" src="./src/images/background/bg-el3.png" width="60" height="120" alt=""
             class="absolute z-0 top-[10vh] left-[15vw] parallax-bg" />
           <img data-speed="-1.1" data-movex="-300" src="./src/images/background/bg-el2.png" width="100" height="100" alt=""
-            class="absolute z-0 top-[70vh] right-0 parallax-bg" />
+            class="absolute z-0 top-[70vh] right-0 parallax-bg" /> -->
 
           <!-- greenpill book -->
           <div class="flex flex-col items-center">
@@ -197,16 +202,17 @@
       </section>
 
       <!-- podcast -->
-      <section id="podcast" class="slide x-100 sm:h-screen relative">
+      <section id="podcast" class="slide transition-opacity duration-500 x-100 sm:h-screen relative">
         <div class="pb-24 pt-12 max-w-3xl min-h-screen flex gap-4 sm:gap-[10%] items-center justify-center m-auto flex-col sm:flex-row">
           <!-- parallax bg elements -->
           <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
             class="absolute z-0 top-[50vh] parallax-bg" />
-          <img data-speed="-1.3" data-movex="950" src="./src/images/background/bg-el3.png" width="60" height="120" alt=""
+          <img data-speed="-1.3" data-movex="400" src="./src/images/background/bg-el3.png" width="60" height="120" alt=""
             class="absolute z-0 top-[10vh] left-[15vw] parallax-bg" />
           <img data-speed="-1.1" data-movex="-300" src="./src/images/background/bg-el2.png" width="100" height="100" alt=""
             class="absolute z-0 top-[70vh] right-0 parallax-bg" />
-          <div class="flex flex-col gap-6">
+
+          <div class="flex flex-col gap-6 z-10">
             <h2 class="font-volkhov text-xl lg:text-3xl text-yellow">The Greenpill podcast <br/>
             (2022 - present)</h2>
             <p>The greenpill podcast dives deeper into the regenerative crypto-economic frontier.</p>
@@ -228,11 +234,11 @@
       <!-- resources -->
       <section id="multimedia" class="pb-24 pt-12 min-h-screen max-w-4xl m-auto relative">
         <!-- parallax bg elements -->
-        <img data-speed="-1.5" data-movex="500" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
-          class="absolute z-0 top-[50vh] parallax-bg" />
+        <img data-speed="-1.5" data-movex="300" src="./src/images/background/bg-el1.png" width="100" height="100" alt=""
+          class="absolute z-0 top-[30vh] parallax-bg" />
         <img data-speed="-1.3" data-movex="950" src="./src/images/background/bg-el3.png" width="60" height="120" alt=""
           class="absolute z-0 top-[10vh] left-[15vw] parallax-bg" />
-        <img data-speed="-1.1" data-movex="-300" src="./src/images/background/bg-el2.png" width="100" height="100" alt=""
+        <img data-speed="-1.1" data-movex="-200" src="./src/images/background/bg-el2.png" width="100" height="100" alt=""
           class="absolute z-0 top-[70vh] right-0 parallax-bg" />
         <h2 class="font-volkhov text-xl lg:text-3xl text-yellow">Resources</h2>
         <div class="flex gap-2 sm:gap-[10%] justify-center relative h-fit">
@@ -365,8 +371,6 @@
         </footer>
       </section>
     </div>
-    </main>
-
     
   </div>
 
@@ -405,110 +409,14 @@
     const getPositionFromCoords = () => {}
 
     const LOCATION_RADIUS = 6;
-    const locations = [
-      
-      {
-        name: 'Los Angeles',
-        lat: 34.09,
-        long: -118.3,
-      },
-      {
-        name: 'India',
-        lat: 21,
-        long: 78,
-      },
-      {
-        name: 'Czech Republic',
-        lat: 50,
-        long: 14.4,
-      },
-      {
-        name: 'Türkiye',
-        lat: 40,
-        long: 33,
-      },
-      {
-        name: 'Koh Pha Ngan',
-        lat: 9.75,
-        long: 100,
-      },
-      {
-        name: 'West Africa',
-        lat: 13.53,
-        long: -2.46,
-      },
-      {
-        name: 'Indonesia',
-        lat: -6.2,
-        long: 106.81,
-      },
-      {
-        name: 'Berlin',
-        lat: 52.52,
-        long: 13.4,
-      },
-      {
-        name: 'Canada',
-        lat: 50,
-        long: -85,
-      },
-      {
-        name: 'Mexico City',
-        lat: 19.4,
-        long: -99,
-      },
-      {
-        name: 'Mexico',
-        lat: 23,
-        long: -103,
-      },
-      {
-        name: 'Japan',
-        lat: 36.2,
-        long: 138,
-      },
-      {
-        name: 'Germany',
-        lat: 51,
-        long: 10,
-      },
 
-      {
-        name: 'Korea',
-        lat: 37.53,
-        long: 127,
-      },
-      {
-        name: 'Yucatan Peninsula',
-        lat: 20.4,
-        long: -89.13,
-      },
-      {
-        name: 'New York',
-        lat: 40.73,
-        long: -73.93,
-      },
-      {
-        name: 'Boston',
-        lat: 42.36,
-        long: -71,
-      },
-      {
-        name: 'Denver',
-        lat: 39.74,
-        long: -104.90,
-      },
-      {
-        name: 'Suriname',
-        lat: 3.91,
-        long: -56.02,
-      },
-      {
-        name: 'China',
-        lat: 39.9,
-        long: 116.3,
-      },
-    ];
+    let locations;
+    fetch("./src/locations.json")
+      .then(response => response.json())
+      .then(json => {
+        locations = json;
+        createLocations();
+      });
 
     const createLocations = () => {
       locations.forEach(location => {
@@ -520,8 +428,6 @@
         ctx2.fill();
       });
     };
-
-    window.onload = createLocations;
 
     const getClickCoords = (event) => {
       const container = canvas2.getBoundingClientRect();
@@ -659,20 +565,164 @@
       })
   </script>
 
-<script>
-  const menuIcon = document.getElementById('mobile-menu-icon');
-  const menu = document.getElementById('mobile-menu');
+  <script>
+    // slides
+    const slides = document.querySelector('.slides');
+    let isMobile = true;
+    const mobileMediaQuery = window.matchMedia("(max-width: 1200px)");
+    let animationObj;
+    let currentIndex = -1;
+    let animating, intentObserver;
+    let swipePanels = gsap.utils.toArray(".slide");
 
-  const handleMenuClick = () => {
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'block';
+    const initSlides = () => {
+      gsap.set(".x-100", { xPercent: 100 });
+
+      gsap.set(swipePanels, {
+        zIndex: i => i + 30
+      });
+
+      intentObserver = ScrollTrigger.observe({
+        type: "wheel,touch",
+        onUp: () => !animating && gotoPanel(currentIndex + 1, true),
+        onDown: () => !animating && gotoPanel(currentIndex - 1, false),
+        wheelSpeed: -1,
+        tolerance: 10,
+        preventDefault: true,
+        scrollSpeed: 1,
+        onPress: self => {
+          ScrollTrigger.isTouch && self.event.preventDefault()
+        }
+      })
+      intentObserver.disable();
+
+      ScrollTrigger.create({
+        trigger: ".slides",
+        pin: true,
+        start: "top top",
+        end: "+=1",
+        onEnter: (self) => {
+          intentObserver.enable();
+          gotoPanel(currentIndex + 1, true);
+        },
+        onEnterBack: () => {
+          intentObserver.enable();
+          gotoPanel(currentIndex - 1, false);
+        }
+      })
+    };
+
+    function buildConditionalTween(mobileMediaQuery) {
+      if (mobileMediaQuery.matches) {
+        isMobile = true;
+        slides.classList.remove('active');
+        swipePanels.forEach(panel => panel.classList.remove('active'));
+        intentObserver && intentObserver.disable();
+        animationObj && animationObj.kill();
+      } else {
+        slides.classList.add('active');
+        swipePanels.forEach(panel => panel.classList.add('active'));
+        isMobile = false;
+        initSlides();
+      }
     }
-    
-  }
-  menuIcon.addEventListener('click', handleMenuClick);
-</script>
+    buildConditionalTween(mobileMediaQuery);
+    mobileMediaQuery.addListener(buildConditionalTween);
+
+    // handle the panel swipe animations
+    function gotoPanel(index, isScrollingDown) {
+      animating = true;
+      // return to normal scroll if it's the end or the start
+      if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
+
+        let target = index;
+        gsap.to(target, {
+          // xPercent: isScrollingDown ? -100 : 0,
+          duration: 0.00,
+          onComplete: () => {
+            animating = false;
+            isScrollingDown && intentObserver.disable();
+          }
+        });
+        return;
+      }
+
+      let target = isScrollingDown ? swipePanels[index] : swipePanels[currentIndex];
+      swipePanels.forEach((panel, i) => {
+        if (i < index && isScrollingDown) panel.style.opacity = 0;
+        if (!isScrollingDown) {
+          if (i == index) panel.style.opacity = 1;
+          // panel.style.opacity = i > index ? 0 : 1}
+        }
+      });
+
+      animationObj = gsap.to(target, {
+        xPercent: isScrollingDown ? 0 : 100,
+        duration: 1.2,
+        onComplete: () => {
+          animating = false;
+        }
+      });
+      currentIndex = index;
+    }
+  </script>
+
+  <script>
+    // mobile menu
+
+    const menuIcon = document.getElementById('mobile-menu-icon');
+    const menu = document.getElementById('mobile-menu');
+    const menuItems = document.querySelectorAll('#mobile-menu a');
+
+    const handleSelectMenu = (index, sectionId) => {
+      if (index <= 1) {
+        // book or podcast
+        for (let i = currentIndex; i < index + 3; i++) {
+          gotoPanel(i, true);
+        }
+      } else {
+        for (let i = currentIndex; i < swipePanels.length; i++) {
+          gotoPanel(i, true);
+        }
+        
+        gsap.to(swipePanels.length, {
+          duration: 0.00,
+          onComplete: () => {
+            animating = false;
+            intentObserver.disable();
+          }
+        });
+        const section = document.getElementById(sectionId);
+        const sectionStart = section.getBoundingClientRect().top;
+        window.scrollTo(0, sectionStart)
+      }
+    }
+    menuItems.forEach((menuItem, index) => {
+      menuItem.addEventListener('click', () => handleSelectMenu(index, menuItem.dataset.section))
+    })
+
+    const handleMenuClick = () => {
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+      
+    }
+    menuIcon.addEventListener('click', handleMenuClick);
+
+    const goToTop = () => {
+      if (currentIndex == 0) return;
+      window.scrollTo(0, 0);
+      for (let i = currentIndex; i >= 0 ; i--) {
+        gotoPanel(i, false);
+      }
+      swipePanels[0].style.opacity = 1;
+    }
+
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', goToTop);
+  </script>
 
   <script>
     // resources
@@ -773,94 +823,5 @@
         // ease: "none"
       });
   </script>
-
-  <script>
-  //  let sections = gsap.utils.toArray(".slide");
-// v3
-
-// const mobileMediaQuery = window.matchMedia("(max-width: 640px)");
-
-  // function buildConditionalTween(mobileMediaQuery) {
-  //    if (mobileMediaQuery.matches) {
-  //     intentObserver.disable();
-  //    }
-  // }
-  // buildConditionalTween(mobileMediaQuery);
-  // mobileMediaQuery.addListener(buildConditionalTween);
-
-  let currentIndex = -1;
-  let animating;
-  let swipePanels = gsap.utils.toArray(".slide");
-
-  gsap.set(".x-100", { xPercent: 100 });
-
-  gsap.set(swipePanels, {
-    zIndex: i => i
-  });
-
-  let intentObserver = ScrollTrigger.observe({
-    type: "wheel,touch",
-    onUp: () => !animating && gotoPanel(currentIndex + 1, true),
-    onDown: () => !animating && gotoPanel(currentIndex - 1, false),
-    wheelSpeed: -1,
-    tolerance: 10,
-    preventDefault: true,
-    scrollSpeed: 1,
-    onPress: self => {
-      ScrollTrigger.isTouch && self.event.preventDefault()
-    }
-  })
-  intentObserver.disable();
-
-  // handle the panel swipe animations
-  function gotoPanel(index, isScrollingDown) {
-    animating = true;
-    // return to normal scroll if it's the end or the start
-    if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
-
-      let target = index;
-      gsap.to(target, {
-        // xPercent: isScrollingDown ? -100 : 0,
-        duration: 0.00,
-        onComplete: () => {
-          animating = false;
-          isScrollingDown && intentObserver.disable();
-        }
-      });
-      return
-    }
-
-    let target = isScrollingDown ? swipePanels[index] : swipePanels[currentIndex];
-
-    gsap.to(target, {
-      xPercent: isScrollingDown ? 0 : 100,
-      duration: 1.2,
-      onComplete: () => {
-        animating = false;
-      }
-    });
-    currentIndex = index;
-    console.log(index);
-
-  }
-
-  ScrollTrigger.create({
-    trigger: ".slides",
-    pin: true,
-    start: "top top",
-    end: "+=1",
-    onEnter: (self) => {
-      intentObserver.enable();
-      gotoPanel(currentIndex + 1, true);
-    },
-    onEnterBack: () => {
-      intentObserver.enable();
-      gotoPanel(currentIndex - 1, false);
-    }
-  })
-
-  </script>
-
-
 </body>
 </html>

@@ -20,30 +20,22 @@ body {
   overflow-x: hidden;
   /* padding: 0 0.5rem; */
   /* mix-blend-mode: screen; */
-overscroll-behavior: none;
+  overscroll-behavior: none;
   font-weight: 500;
+  background: url('./src/images/greenpill-bg.png') var(--dark-green);
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 section {
   padding: 0 1rem;
 }
 
-.bg-img-y {
-background: url('./src/images/greenpill-bg.png') var(--dark-green);
-  background-position: top;
-  background-repeat: repeat-y;
-  background-size: contain;
-}
 
-.bg-img-x {
-  background: url('./src/images/greenpill-bg.png') var(--dark-green);
-  background-position: top;
-  background-repeat: repeat-x;
-  background-size: contain;
-}
-.parallax-bg {
+/* .parallax-bg {
   display: none;
-}
+} */
 
 button {
   border-radius: 35px;
@@ -116,19 +108,15 @@ button.secondary:hover {
   max-height: 300px;
 }
 
-.slides {
+.slides.active {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: visible;
 }
-.slide {
+.slide.active {
   width: 100vw;
   position: absolute;
-  background: url('./src/images/greenpill-bg.png') var(--dark-green);
-  background-position: top;
-  background-repeat: repeat-x;
-  background-size: contain;
   height: 100vh;
 }
 
