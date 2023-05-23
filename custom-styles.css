@@ -32,11 +32,6 @@ section {
   padding: 0 1rem;
 }
 
-
-/* .parallax-bg {
-  display: none;
-} */
-
 button {
   border-radius: 35px;
   min-width: 160px;
@@ -90,6 +85,10 @@ button.secondary:hover {
 
   p {
     font-size: 0.85rem;
+  }
+
+  .parallax-bg {
+    display: none;
   }
 }
 
