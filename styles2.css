@@ -10,14 +10,39 @@ p {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: url('./src/images/greenpill-bg.png') var(--dark-green);
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+  /* padding: 0 0.5rem; */
+  /* mix-blend-mode: screen; */
+overscroll-behavior: none;
+  font-weight: 500;
+}
+
+section {
+  padding: 0 1rem;
+}
+
+.bg-img-y {
+background: url('./src/images/greenpill-bg.png') var(--dark-green);
   background-position: top;
   background-repeat: repeat-y;
   background-size: contain;
-  /* mix-blend-mode: screen; */
+}
 
-  font-weight: 500;
+.bg-img-x {
+  background: url('./src/images/greenpill-bg.png') var(--dark-green);
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+.parallax-bg {
+  display: none;
 }
 
 button {
@@ -60,9 +85,20 @@ button.secondary:hover {
   transform: translate(2px, 2px);
 }
 
-.heart-icon {
-  
-  color: linear-gradient(312.31deg, #08FFB8 30.49%, #5799F7 94.47%);
+@media only screen and (max-width: 800px) {
+  button {
+    min-width: 130px;
+  }
+
+  .link,
+  button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
 }
 
 /* .hero-section {
@@ -74,8 +110,25 @@ button.secondary:hover {
   margin: 0 auto;
   height: 70vh;
 } */
+
 #resource-img {
   max-width: 300px;
   max-height: 300px;
+}
+
+.slides {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: visible;
+}
+.slide {
+  width: 100vw;
+  position: absolute;
+  background: url('./src/images/greenpill-bg.png') var(--dark-green);
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 100vh;
 }
 
